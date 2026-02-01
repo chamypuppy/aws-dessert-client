@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./App.css"; /* 앞으로 모든 css 파일은 App.css에서 관리 */
+
+/* @font-face {
+  font-family: 'Noto Sans KR';
+  src: url('https://fonts.gstatic.com/s/notosanskr/v19/o-0M8osM3Jd1M_Eu_Ysz7sc-.woff2') format('woff2'),
+       url('https://fonts.gstatic.com/s/notosanskr/v19/o-0M8osM3Jd1M_Eu_Ysz7sc-.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  unicode-range: U+AC00-U+D7A3;
+} */
+
+/* 프리텐다드: 레시피제목 */
+/* @font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+} */
+
+/* @font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+} */
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/fonts-archive/Pretendard/Pretendard-SemiBold.woff2') format('woff2'),
+       url('https://cdn.jsdelivr.net/gh/fonts-archive/Pretendard/Pretendard-SemiBold.woff') format('woff'),
+       url('https://cdn.jsdelivr.net/gh/fonts-archive/Pretendard/Pretendard-SemiBold.otf') format('opentype');
+}
+
+/* Noto Sans KR */
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/fonts-archive/NotoSansKR/NotoSansKR-Light.woff2') format('woff2'),
+       url('https://cdn.jsdelivr.net/gh/fonts-archive/NotoSansKR/NotoSansKR-Light.woff') format('woff'),
+       url('https://cdn.jsdelivr.net/gh/fonts-archive/NotoSansKR/NotoSansKR-Light.otf') format('opentype');
+  unicode-range: U+AC00-U+D7A3; /* 한글만 */
+}
+
+
+/* 산돌고딕 200 600 */
+/* @font-face {
+  font-family: 'Apple SD Gothic Neo';
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/fonts-archive/AppleSDGothicNeo/AppleSDGothicNeo-SemiBold.woff2') format('woff2'),
+       url('https://cdn.jsdelivr.net/gh/fonts-archive/AppleSDGothicNeo/AppleSDGothicNeo-SemiBold.ttf') format('truetype');
+} */
+
+  /* Exo 2 - 숫자 폰트 */
+@font-face {
+  font-family: 'Exo 2';
+  src: url('https://fonts.gstatic.com/s/exo2/v11/KtC07f_Vfo6dhkp6lX_o0F7v3rwoZWJ7dNToW_MfpQI.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  unicode-range: U+0030-U+0039; /* 숫자만 */
+}
+
+body {
+  width: 100%;
+  background-color: #f4f4f4;
+
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif; */
+  /* font-family: "Noto Sans KR", serif; */
+  /* font-family: "Noto Sans KR", serif; */
+  /* font-family: 'Apple SD Gothic Neo'; */
+  font-family: 'Noto Sans KR';
+  font-family: 'Exo 2';
+  /* font-family: 'Pretendard-Regular'; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.7px; /* 자간이었나? */
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  min-height: 100vh;
+  height: auto;
+  margin: 0 auto;
+  padding: 0;
+  background-color: #fff;
+}
+
+/* DetailRecipe만 따로 적용 */
+#common_container {padding: 0 12px;}
+#common_recipe_name {font-family: 'Pretendard';}
+#common_hr_box {width: 100%; height: 20px; background-color: #f7f7f7;}
+
+
+/* layout: detailpage와 mypage 좌우 margin */
+/* #detail_margin_special, #mypage_margin_special {margin-left: 20px; margin-right: 20px;} */

@@ -1,0 +1,8 @@
+/* footer {background-color: #f7f7f773; padding: 30px 20px; color:#8a8a8a; text-align: right;} */
+.f_title {font-size: 1.1rem; font-weight: 500;}
+.f_content {margin-top: 20px; line-height: 23px;}
+.f_content a {color: #8a8a8a;}
+
+/* users/mypage 로그인 안 했을 때, footer가 맨 밑으로 가면 좋을 것 같다. */
+
+footer {position: relative; transform : translateY(0%);}

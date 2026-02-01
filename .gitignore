@@ -1,0 +1,14 @@
+node_modules
+
+.env
+
+build/
+
+# === BFG 관련 제외 ===
+bfg-report/
+..bfg-report/
+**/object-id-map.old-new.txt
+
+public/imgs/convert_before_img
+
+/rimraf

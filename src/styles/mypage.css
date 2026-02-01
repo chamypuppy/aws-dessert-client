@@ -1,0 +1,14 @@
+/* .container_mypage_box {padding-bottom: 100%;} */
+#mypage_margin_special {padding-left: 20px; padding-right: 20px;}
+
+.container_mypage_box {display: flex; flex-direction: column; min-height: 100vh; overflow: hidden;}
+.mypage_box {width: 100%; display: flex; flex-direction: column; align-items: end; line-height: 30px; padding-top: 30px;}
+/* .mypage_box {width: 100%; display: flex; align-items: center; justify-content: space-evenly; line-height: 30px; margin-top: 30px;} */
+
+.mp_box {/* margin-left: 30%; */text-align: right;}
+.mp_img {width: 90px;}
+.mp_name {font-size: 1.4rem;}
+.mp_hello {font-size: 1.1rem;}
+/* .mp_img_box {display: flex; justify-content: center;} */
+
+.btn_logout {/* background-color: transparent; */ height: 50px;}

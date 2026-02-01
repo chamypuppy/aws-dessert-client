@@ -1,0 +1,22 @@
+.header {display:flex; justify-content: space-around;}
+/* .search {padding: 10px 0 1px 0; position: sticky; top: 0; z-index: 1; background-color: white;} */
+
+.s_box {width: 100px; height: 100px; background-color: #f0f0f0; 
+  border-radius: 15px;}
+
+
+.container .home_ul {width: 100%; display: flex; overflow: hidden; flex-wrap: wrap; justify-content: space-around;
+
+}
+
+.home_ul .r_home_list {width: calc(50% - 10px); height: 260px;/* box-sizing: border-box; */ position: relative;}
+
+.home_ul .r_home_list img {width: 100%; height: 156px; /* height: auto; */ margin-bottom: 8px; border-radius: 10px;}
+
+.r_home_list {line-height: 23px;}
+.r_home_name {font-size: 1.1rem;}
+.r_home_au_name {font-size: 0.9rem; color: #8a8a8a;}
+
+
+.home_ul .like_box {position: absolute; top: 124px; right: 10px;}
+.icon_like {cursor: pointer; font-size: 1.5rem;}
