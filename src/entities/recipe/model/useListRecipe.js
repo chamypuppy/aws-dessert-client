@@ -15,8 +15,8 @@ export const useListRecipe = (keyword) => {
             // true: 검색결과   false: 전체레시피 리스트
 
             const isKeyword = keyword
-            ? `${process.env.REACT_APP_CLOUDTYPE_BACKEND_URL}/api/recipe/search?keyword=${encodeURIComponent(keyword)}`
-            : `${process.env.REACT_APP_CLOUDTYPE_BACKEND_URL}/api/recipe`;
+            ? `${process.env.REACT_APP_SERVER_URL}/api/recipe/search?keyword=${encodeURIComponent(keyword)}`
+            : `${process.env.REACT_APP_SERVER_URL}/api/recipe`;
 
             const response = await axios.get(isKeyword);
             setRecipeList(response.data);

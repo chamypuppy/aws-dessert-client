@@ -19,7 +19,7 @@ function Search(){
 
   /* 세션에 저장된 userPkId 값 가져오기 */
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_CLOUDTYPE_BACKEND_URL}/api/users/session`, {
+    fetch(`${process.env.REACT_APP_SERVER_URL}/api/users/session`, {
       method: 'GET',
       credentials: 'include', // 세션 쿠키 포함 (CORS 설정에 따라 필요)
     })

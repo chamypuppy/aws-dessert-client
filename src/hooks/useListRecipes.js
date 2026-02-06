@@ -12,10 +12,10 @@ export const useListRecipes = (keyword) => {
         setLoading(true);
 
         const chooseUrl = keyword.trim()
-        ? `${process.env.REACT_APP_CLOUDTYPE_BACKEND_URL}/api/recipes/search?keyword=${encodeURIComponent(keyword)}`
-        : `${process.env.REACT_APP_CLOUDTYPE_BACKEND_URL}/api/recipes`;
+        ? `${process.env.REACT_APP_SERVER_URL}/api/recipes/search?keyword=${encodeURIComponent(keyword)}`
+        : `${process.env.REACT_APP_SERVER_URL}/api/recipes`;
 
-        /* const response = await axios.get(`${process.env.REACT_APP_CLOUDTYPE_BACKEND_URL}/api/recipes`); // db 주소 제대로 쓰기
+        /* const response = await axios.get(`${process.env.REACT_APP_SERVER_URL}/api/recipes`); // db 주소 제대로 쓰기
         console.log(response.data); */
 
         const response = await axios.get(chooseUrl);

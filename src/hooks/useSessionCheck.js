@@ -5,7 +5,7 @@ import axios from 'axios';
 export default function useSessionCheck () {
 
   useEffect(() => { 
-    fetch(`${process.env.REACT_APP_CLOUDTYPE_BACKEND_URL}/api/users/session`, {
+    fetch(`${process.env.REACT_APP_SERVER_URL}/api/users/session`, {
       method: 'GET',
       credentials: 'include',
       withCredentials: true,
@@ -25,7 +25,7 @@ export default function useSessionCheck () {
       }
       
       // 사용자 정보 불러오기
-      fetch(`${process.env.REACT_APP_CLOUDTYPE_BACKEND_URL}/api/users/${data.USER_PK_ID}`)
+      fetch(`${process.env.REACT_APP_SERVER_URL}/api/users/${data.USER_PK_ID}`)
         .then((res) => res.json())
         .then((data) => {
           console.log("data.userInfo: ", data.userInfo);

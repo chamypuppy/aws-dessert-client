@@ -34,7 +34,7 @@ function Mypage() {
 
   // 세션 검사 API
   useEffect(() => { 
-    fetch(`${process.env.REACT_APP_CLOUDTYPE_BACKEND_URL}/api/users/session`, {
+    fetch(`${process.env.REACT_APP_SERVER_URL}/api/users/session`, {
       method: 'GET',
       credentials: 'include',
       withCredentials: true,
@@ -54,7 +54,7 @@ function Mypage() {
       }
       
       // 사용자 정보 불러오기
-      fetch(`${process.env.REACT_APP_CLOUDTYPE_BACKEND_URL}/api/users/${data.USER_PK_ID}`)
+      fetch(`${process.env.REACT_APP_SERVER_URL}/api/users/${data.USER_PK_ID}`)
         .then((res) => res.json())
         .then((data) => {
           console.log("data.userInfo: ", data.userInfo);
@@ -74,7 +74,7 @@ function Mypage() {
   }, [navigate]);
 
   /*
-  fetch(`${process.env.REACT_APP_CLOUDTYPE_BACKEND_URL}/api/users/session`, {
+  fetch(`${process.env.REACT_APP_SERVER_URL}/api/users/session`, {
       method: 'GET',
       credentials: 'include',
       withCredentials: true,
@@ -93,7 +93,7 @@ function Mypage() {
         navigate("/users/login");
         
       } else { // 사용자 정보 불러오기
-        fetch(`${process.env.REACT_APP_CLOUDTYPE_BACKEND_URL}/api/users/${data.USER_PK_ID}`)
+        fetch(`${process.env.REACT_APP_SERVER_URL}/api/users/${data.USER_PK_ID}`)
           .then((res) => res.json())
           .then((data) => {
             console.log("data.userInfo: ", data.userInfo);
@@ -125,7 +125,7 @@ function Mypage() {
     //const accessToken = localStorage.getItem('kakao_access_token', accessToken);
 
     try {
-      const response = await fetch(`${process.env.REACT_APP_CLOUDTYPE_BACKEND_URL}/api/kakao/logout`, {
+      const response = await fetch(`${process.env.REACT_APP_SERVER_URL}/api/kakao/logout`, {
           method: 'POST',  
           credentials: 'include',
       });
@@ -153,7 +153,7 @@ function Mypage() {
     } 
     
     try {
-      const primaryLogoutResults = await axios.post(`${process.env.REACT_APP_CLOUDTYPE_BACKEND_URL}/api/users/logout`, null, { withCredentials: true });
+      const primaryLogoutResults = await axios.post(`${process.env.REACT_APP_SERVER_URL}/api/users/logout`, null, { withCredentials: true });
 
       if(primaryLogoutResults.data.success) {
         alert(primaryLogoutResults.data.message);

@@ -11,7 +11,7 @@ export const useAuthor = (author_id) => {
     const authorNameSync = async() => {
 
       try {
-        const result = await axios.get(`${process.env.REACT_APP_CLOUDTYPE_BACKEND_URL}/api/users/username`, 
+        const result = await axios.get(`${process.env.REACT_APP_SERVER_URL}/api/users/username`, 
         { params: {author: author_id} });
 
         console.log("🟠🟠🟠", result.data);

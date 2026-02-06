@@ -41,7 +41,7 @@ export const SubmitResearchBtn = () => {
 
     try {
       // await 해주기
-      const researchResult = await axios.post(`${process.env.REACT_APP_CLOUDTYPE_BACKEND_URL}/api/users/research/res/ok`, researchData, { withCredentials: true });
+      const researchResult = await axios.post(`${process.env.REACT_APP_SERVER_URL}/api/users/research/res/ok`, researchData, { withCredentials: true });
 
       if(researchResult.data.success){
         alert(researchResult.data.message);

@@ -10,7 +10,7 @@ export const PlusButton = () => {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_CLOUDTYPE_BACKEND_URL}/api/users/session`, {
+    fetch(`${process.env.REACT_APP_SERVER_URL}/api/users/session`, {
       method: 'GET',
       credentials: 'include',
     })

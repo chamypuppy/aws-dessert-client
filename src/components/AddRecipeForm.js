@@ -56,7 +56,7 @@ export const AddRecipeForm = () => {
     formData.append('tags', JSON.stringify(tags));
 
     try {
-      const res = await axios.post(`${process.env.REACT_APP_CLOUDTYPE_BACKEND_URL}/api/recipe/add`, formData);
+      const res = await axios.post(`${process.env.REACT_APP_SERVER_URL}/api/recipe/add`, formData);
       alert('레시피가 등록되었습니다!');
     } catch (err) {
       console.error(err);

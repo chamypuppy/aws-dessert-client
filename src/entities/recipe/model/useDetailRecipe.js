@@ -11,7 +11,7 @@ export const useDetailRecipe = (recipe_pk_id) => {
   useEffect(() => {
     const detailRecipeAsync = async() => {
       try {
-        const result = await axios.get(`${process.env.REACT_APP_CLOUDTYPE_BACKEND_URL}/api/recipe/detail/${recipe_pk_id}`, { params: {recipe_pk_id: recipe_pk_id} });
+        const result = await axios.get(`${process.env.REACT_APP_SERVER_URL}/api/recipe/detail/${recipe_pk_id}`, { params: {recipe_pk_id: recipe_pk_id} });
 
         if(!result) console.log("🟡 useDetailRecipe: data 불러오기 오류");
 

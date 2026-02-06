@@ -35,7 +35,7 @@ export const LaterResearchBtn = () => {
       }));
 
       try {
-        await axios.post(`${process.env.REACT_APP_CLOUDTYPE_BACKEND_URL}/api/users/research/res/no`, researchData, { withCredentials: true });
+        await axios.post(`${process.env.REACT_APP_SERVER_URL}/api/users/research/res/no`, researchData, { withCredentials: true });
         navigate("/");
       } catch(err) {
         console.log("신탁스 에러:", researchData);

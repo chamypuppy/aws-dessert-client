@@ -29,7 +29,7 @@ function Signup () {
     e.preventDefault();
     
     try {
-      const signupResult = await axios.post(`${process.env.REACT_APP_CLOUDTYPE_BACKEND_URL}/api/users/signup/register`, formData, { withCredentials: true });
+      const signupResult = await axios.post(`${process.env.REACT_APP_SERVER_URL}/api/users/signup/register`, formData, { withCredentials: true });
 
       console.log("결과값:",signupResult);
 

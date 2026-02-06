@@ -13,7 +13,7 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const loginCheck = async () => {
       try {
-        const response = await axios.get(`${process.env.REACT_APP_CLOUDTYPE_BACKEND_URL}/api/users/session`, { withCredentials: true });
+        const response = await axios.get(`${process.env.REACT_APP_SERVER_URL}/api/users/session`, { withCredentials: true });
 
         const data = response.data;
         const isLogin = data.isLogin;

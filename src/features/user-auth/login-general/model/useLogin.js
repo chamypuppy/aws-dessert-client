@@ -47,7 +47,7 @@ export const useLogin = () => {
     }
 
     try {
-      const loginResult = await axios.post(`${process.env.REACT_APP_CLOUDTYPE_BACKEND_URL}/api/users/login/register`, loginData, { withCredentials: true });
+      const loginResult = await axios.post(`${process.env.REACT_APP_SERVER_URL}/api/users/login/register`, loginData, { withCredentials: true });
 
       console.log("결과값:",loginResult);
       console.log("결과값2:",loginResult.data.success);

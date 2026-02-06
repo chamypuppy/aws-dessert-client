@@ -4,12 +4,12 @@ import { useEffect } from "react";
 export const useKakao = () => {
 
   const handleKakao = () => {
-    window.location.href = `${process.env.REACT_APP_CLOUDTYPE_BACKEND_URL}/api/kakao/login`;
+    window.location.href = `${process.env.REACT_APP_SERVER_URL}/api/kakao/login`;
   };
 
   const fetchKakaoInfo = async () => {
     try {
-      const response = await fetch(`${process.env.REACT_APP_CLOUDTYPE_BACKEND_URL}/auth/kakao/request/redirect_uri`, {
+      const response = await fetch(`${process.env.REACT_APP_SERVER_URL}/auth/kakao/request/redirect_uri`, {
         method: 'GET',
         credentials: 'include', // 쿠키 기반 인증을 사용할 경우
       });

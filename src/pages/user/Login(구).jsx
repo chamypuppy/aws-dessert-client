@@ -11,13 +11,13 @@ const Login = () => {
 
   // 카카오 로그인 버튼 클릭 시 백엔드 서버의 로그인 엔드포인트로 이동
   const btnKakaoLogin = () => {
-    window.location.href = `${process.env.REACT_APP_CLOUDTYPE_BACKEND_URL}/api/kakao/login`;
+    window.location.href = `${process.env.REACT_APP_SERVER_URL}/api/kakao/login`;
   };
 
    // 로그인 후 사용자 정보 받기
   const fetchUserInfo = async () => {
     try {
-      const response = await fetch(`${process.env.REACT_APP_CLOUDTYPE_BACKEND_URL}/auth/kakao/request/redirect_uri`, {
+      const response = await fetch(`${process.env.REACT_APP_SERVER_URL}/auth/kakao/request/redirect_uri`, {
         method: 'GET',
         credentials: 'include', // 쿠키 기반 인증을 사용할 경우
       });
@@ -96,7 +96,7 @@ async function onClickLoginSubmit(e) {
   }
 
   try {
-    const loginResult = await axios.post(`${process.env.REACT_APP_CLOUDTYPE_BACKEND_URL}/api/users/login/register`, loginData, { withCredentials: true });
+    const loginResult = await axios.post(`${process.env.REACT_APP_SERVER_URL}/api/users/login/register`, loginData, { withCredentials: true });
 
     console.log("결과값:",loginResult);
     console.log("결과값2:",loginResult.data.success);
