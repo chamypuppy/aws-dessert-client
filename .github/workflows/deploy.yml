@@ -14,11 +14,11 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-        env:
-          REACT_APP_SERVER_URL: ${{ secrets.REACT_APP_SERVER_URL }}
 
       - name: Build project
         run: CI=false npm run build
+        env:
+          REACT_APP_SERVER_URL: ${{ secrets.REACT_APP_SERVER_URL }}
 
       - name: Deploy to S3
         uses: jakejarvis/s3-sync-action@v0.5.1
