@@ -4,6 +4,7 @@ import { Main } from "../../../pages/main/ui/Main";
 import DetailRecipe from "../../../pages/detail-recipe/ui/DetailRecipe";
 import { Search } from '../../../pages/SearchResult/Search';
 import { Login } from '../../../pages/login/ui/Login';
+import MyPage from '../../../pages/user/MyPage';
 
 export const AppRouter = () => {
 
@@ -17,6 +18,7 @@ export const AppRouter = () => {
         <Route path="/recipe/detail/:recipe_pk_id" element={<DetailRecipe />}/>
         <Route path="/recipe/search" element={<Search />}/>
         <Route path="/users/login" element={<Login />} />
+        <Route path="/users/mypage" element={<MyPage />} />
 
         {/* <Route path="/recipe/:recipe_pk_id" element={<DetailRecipe recipes={fetchRecipe} recipeMethods={recipeMethods} />} />
           
