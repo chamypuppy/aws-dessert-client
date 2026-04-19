@@ -4,7 +4,7 @@ import { Main } from "../../../pages/main/ui/Main";
 import DetailRecipe from "../../../pages/detail-recipe/ui/DetailRecipe";
 import { Search } from '../../../pages/SearchResult/Search';
 import { Login } from '../../../pages/login/ui/Login';
-import MyPage from '../../../pages/user/MyPage';
+import MyPage from '../../../pages/mypage/MyPage';
 
 export const AppRouter = () => {
 

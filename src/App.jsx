@@ -13,7 +13,7 @@ import Search from './components/common/Search';
 import Signup from './pages/user/Signup';
 import DetailRecipe from './pages/recipe/DetailRecipe';
 import Login from './pages/user/Login';
-import MyPage from './pages/user/MyPage';
+import MyPage from './pages/mypage/MyPage';
 import Research from './pages/user/Research';
 import { Footer } from './components/common/Footer';
 import { DragBackButton } from './components/common/DragBackButton';
