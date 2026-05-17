@@ -5,6 +5,8 @@ import DetailRecipe from "../../../pages/detail-recipe/ui/DetailRecipe";
 import { Search } from '../../../pages/SearchResult/Search';
 import { Login } from '../../../pages/login/ui/Login';
 import MyPage from '../../../pages/mypage/MyPage';
+import RecipeCreatePage from '../../../pages/recipe-crud/RecipeCreatePage';
+import RecipeEditPage from '../../../pages/recipe-crud/RecipeEditPage';
 
 export const AppRouter = () => {
 
@@ -19,6 +21,8 @@ export const AppRouter = () => {
         <Route path="/recipe/search" element={<Search />}/>
         <Route path="/users/login" element={<Login />} />
         <Route path="/users/mypage" element={<MyPage />} />
+        <Route path="/recipe/add" element={<RecipeCreatePage />} />
+        <Route path="/recipe/edit/:recipe_pk_id" element={<RecipeEditPage />} />
 
         {/* <Route path="/recipe/:recipe_pk_id" element={<DetailRecipe recipes={fetchRecipe} recipeMethods={recipeMethods} />} />
           
